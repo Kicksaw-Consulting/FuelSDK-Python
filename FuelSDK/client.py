@@ -217,6 +217,8 @@ class ET_Client(object):
            file_location = wsdl_file_local_location
         else:
            path = os.path.dirname(os.path.abspath(__file__))
+           from tempfile import gettempdir
+           path = gettempdir()
            file_location = os.path.join(path, 'ExactTargetWSDL.xml')
         file_url = 'file:///' + file_location 
         
